@@ -1,10 +1,23 @@
 <div class="container-fluid container-sm bg-light pt-5 border my-4">
-  <h1 class="text-center pt-3 mb-5 font-weight-bold">PLAYER 1, CHOOSE YOUR HAND</h1>
+  <h1 class="text-center pt-3 mb-5 font-weight-bold">{{player1.username}}, choose your hand</h1>
   <div class="d-flex justify-content-center">
-    <div class="btn-group mb-1 pb-3 pt-5 w-75">
-      <button type="button" class="btn btn-secondary mr-1">ROCK</button>
-      <button type="button" class="btn btn-dark mr-1">PAPER</button>
-      <button type="button" class="btn btn-secondary">SCISSORS</button>
+    <div class="btn-group mb-1 pb-3 pt-4 w-75">
+      <button type="button" class="btn btn-secondary mr-1" (click)="onChooseHand('rock')">ROCK</button>
+      <button type="button" class="btn btn-dark mr-1" (click)="onChooseHand('paper')">PAPER</button>
+      <button type="button" class="btn btn-secondary" (click)="onChooseHand('scissors')">SCISSORS</button>
+    </div>
+  </div>
+  <div class="d-flex">
+    <div class="form-group row w-75 mx-auto mt-5">
+      <label for="customUrl" class="col-sm-2  col-form-label font-weight-bold">Game URL</label>
+      <div class="col-sm-10 ">
+        <input type="text" readonly class="form-control-plaintext bg-white border text-center" id="customUrl"
+               value="player2Url">
+        <button type="submit" class="btn btn-primary mt-1 w-50 mx-auto" routerLink="/player2Url"
+                (click)="onInvitePlayer()">
+          Invite Player to Game
+        </button>
+      </div>
     </div>
   </div>
 </div>

@@ -2,21 +2,20 @@
   <h1 class="text-center font-weight-bold">GAME ENDED</h1>
   <h3 class="pt-5 pl-5 font-weight-bold">FINAL RESULTS:</h3>
   <ul class="list-group list-group-horizontal pb-1 mx-5">
-    <li class="list-group-item d-flex flex-fill bg-dark text-white">PLAYER 1 NAME</li>
-    <li class="list-group-item bg-dark text-white">WINS: X</li>
-    <li class="list-group-item bg-dark text-white">LOSES: X</li>
-    <li class="list-group-item bg-dark text-white">DRAWS: X</li>
+    <li class="list-group-item d-flex flex-fill bg-dark text-white">{{player1.username}}</li>
+    <li class="list-group-item bg-dark text-white">WINS: {{player1.wins}}</li>
+    <li class="list-group-item bg-dark text-white">LOSSES: {{player1.losses}}</li>
+    <li class="list-group-item bg-dark text-white">DRAWS: {{player1.draws}}</li>
   </ul>
   <ul class="list-group list-group-horizontal pb-3 mx-5">
-    <li class="list-group-item d-flex flex-fill bg-dark text-white">PLAYER 2 NAME</li>
-    <li class="list-group-item bg-dark text-white">WINS: X</li>
-    <li class="list-group-item bg-dark text-white">LOSES: X</li>
-    <li class="list-group-item bg-dark text-white">DRAWS: X</li>
+    <li class="list-group-item d-flex flex-fill bg-dark text-white">{{player2.username}}</li>
+    <li class="list-group-item bg-dark text-white">WINS: {{player2.wins}}</li>
+    <li class="list-group-item bg-dark text-white">LOSES: {{player2.losses}}</li>
+    <li class="list-group-item bg-dark text-white">DRAWS: {{player2.draws}}</li>
   </ul>
-  <div class="d-flex justify-content-center pt-5 pb-3">
-    <div class="btn-group w-75">
-      <button type="button" class="btn btn-secondary mr-3">START NEW GAME</button>
-      <button type="button" class="btn btn-dark">QUIT GAME</button>
+  <div class="d-flex justify-content-center pt-4 pb-3">
+    <div class="btn-group w-50">
+      <button type="button" class="btn btn-secondary mr-3" routerLink="/start">START NEW GAME</button>
     </div>
   </div>
 </div>

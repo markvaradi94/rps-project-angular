@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {GameService} from "../game.service";
 
 @Component({
   selector: 'app-join-game',
@@ -6,12 +7,16 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./join-game.component.css']
 })
 export class JoinGameComponent implements OnInit {
-  player2Name: string = '';
+  @Input() player2Name: string = '';
 
-  constructor() {
+  constructor(private gameService: GameService) {
   }
 
   ngOnInit(): void {
+  }
+
+  onAddPlayer2() {
+    this.gameService.addPlayer2(this.player2Name, '');
   }
 
 }
